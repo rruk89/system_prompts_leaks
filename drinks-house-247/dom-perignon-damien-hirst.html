@@ -1,0 +1,244 @@
+<!--
+  Drinks House 247: Dom Pérignon x Damien Hirst landing page
+  Shopify Admin > Online Store > Pages (edit in HTML view only)
+
+  Page title:        Dom Pérignon x Damien Hirst
+  URL handle:        dom-perignon-damien-hirst
+  SEO title:         Dom Pérignon x Damien Hirst Limited Edition | Same-Day London
+  Meta description:  Shop the Dom Pérignon x Damien Hirst Kaleidoscope editions, Vintage 2018 & Rosé 2010, plus the Hirst caviar hamper. Same-day London delivery, 24/7.
+-->
+<style>
+  .dph{--ink:#16161a;--muted:#5d5d66;--gold:#a8864f;--line:#e5e1d8;--bg:#faf8f4;--blue:#1f2a6b;--violet:#4b2a7a;--pink:#b8336a;--rose:#e3779d;color:var(--ink);line-height:1.6;max-width:1140px;margin:0 auto;padding:0 16px}
+  .dph h1{font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.15;margin:.3em 0 .35em;letter-spacing:-.01em}
+  .dph h2{font-size:clamp(1.4rem,3vw,2rem);line-height:1.2;margin:2.4em 0 .5em}
+  .dph h3{font-size:1.1rem;margin:0 0 .3em;line-height:1.3}
+  .dph p{margin:0 0 1em}
+  .dph a{color:inherit}
+  .dph-eyebrow{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .dph-hero{border-radius:16px;padding:40px 28px;margin-top:16px;color:#fff;background:linear-gradient(120deg,var(--blue) 0%,var(--violet) 48%,var(--pink) 100%)}
+  .dph-hero .dph-eyebrow{color:#f3d9a4}
+  .dph-hero p{max-width:720px;font-size:1.08rem;opacity:.95}
+  .dph-btn{display:inline-block;text-decoration:none;font-weight:600;padding:12px 22px;border-radius:999px;margin:6px 8px 6px 0;background:#fff;color:var(--ink) !important}
+  .dph-btn.dph-ghost{background:transparent;color:#fff !important;border:1.5px solid rgba(255,255,255,.8)}
+  .dph-btn.dph-dark{background:var(--ink);color:#fff !important}
+  .dph-facts{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+  .dph-facts li{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:6px 14px;font-size:.88rem}
+  .dph-pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:8px}
+  .dph-ed{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+  .dph-ed-top{height:8px}
+  .dph-ed.blue .dph-ed-top{background:linear-gradient(90deg,var(--blue),var(--violet))}
+  .dph-ed.pink .dph-ed-top{background:linear-gradient(90deg,var(--pink),var(--rose))}
+  .dph-ed img{width:100%;aspect-ratio:4/3;object-fit:contain;background:var(--bg);display:block}
+  .dph-ed-body{padding:18px 20px 22px;display:flex;flex-direction:column;flex:1}
+  .dph-ed-body p{color:var(--muted)}
+  .dph-price{font-weight:700;font-size:1.15rem;margin:.2em 0 .8em}
+  .dph-ed-body .dph-btn{align-self:flex-start;margin-top:auto}
+  .dph-table{width:100%;border-collapse:collapse;margin:1.2em 0;font-size:.95rem}
+  .dph-table th,.dph-table td{border-bottom:1px solid var(--line);padding:10px 8px;text-align:left;vertical-align:top}
+  .dph-table thead th{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .dph-tablewrap{overflow-x:auto}
+  .dph-feature{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;align-items:center;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:22px}
+  .dph-feature img{width:100%;border-radius:12px;display:block;background:#fff}
+  .dph-feature ul{padding-left:1.1em;margin:0 0 1em;color:var(--muted)}
+  .dph-car{position:relative}
+  .dph-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(230px,1fr);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 14px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+  @media (min-width:900px){.dph-track{grid-auto-columns:calc((100% - 42px)/4)}}
+  .dph-slide{scroll-snap-align:start;border:1px solid var(--line);border-radius:12px;background:#fff;text-decoration:none;display:flex;flex-direction:column;overflow:hidden;transition:border-color .15s}
+  .dph-slide:hover{border-color:var(--gold)}
+  .dph-slide img{width:100%;aspect-ratio:1/1;object-fit:contain;background:var(--bg);display:block}
+  .dph-slide div{padding:12px 14px 16px}
+  .dph-slide .dph-artist{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .dph-slide h3{font-size:1rem;margin:.25em 0}
+  .dph-slide .dph-p{font-weight:700}
+  .dph-slide .dph-low{font-size:.8rem;color:var(--pink);font-weight:600}
+  .dph-nav{display:flex;gap:8px;justify-content:flex-end;margin:-6px 0 8px}
+  .dph-nav button{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:1.1rem;line-height:1;color:var(--ink)}
+  .dph-nav button:hover{border-color:var(--gold)}
+  .dph-faq details{border-bottom:1px solid var(--line);padding:12px 0}
+  .dph-faq summary{font-weight:600;cursor:pointer}
+  .dph-faq details p{margin:.6em 0 0;color:var(--muted)}
+  .dph-small{font-size:.85rem;color:var(--muted)}
+</style>
+
+<div class="dph">
+
+  <nav class="dph-small" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/collections/dom-perignon-champagne">Dom Pérignon</a> › Dom Pérignon x Damien Hirst</nav>
+
+  <section class="dph-hero">
+    <div class="dph-eyebrow">Limited Edition · 2026</div>
+    <h1>Dom Pérignon x Damien Hirst</h1>
+    <p>Two vintages, two colours, one artist. Damien Hirst turns the Dom Pérignon shield into a kaleidoscope inspired by his celebrated <em>Kaleidoscope</em> series: deep blue and violet for <strong>Vintage 2018</strong>, magenta and pink for <strong>Rosé 2010</strong>. Both are in stock now, with <strong>same-day delivery across London in 30–45 minutes, 24/7</strong>.</p>
+    <a class="dph-btn" href="/products/dom-perignon-x-damien-hirst-vintage-2018-champagne-75cl">Shop Vintage 2018</a>
+    <a class="dph-btn dph-ghost" href="/products/dom-perignon-x-damien-hirst-rose-2010-champagne-75cl">Shop Rosé 2010</a>
+    <ul class="dph-facts">
+      <li>Kaleidoscope gift box</li>
+      <li>75cl · 12.5% ABV</li>
+      <li>Vegan</li>
+      <li>Free gift message</li>
+    </ul>
+  </section>
+
+  <h2>The Pair</h2>
+  <p>Hirst gave each vintage its own palette, so the two bottles read as a set: one cool, one warm. Give one, or send both together.</p>
+  <div class="dph-pair">
+    <article class="dph-ed blue">
+      <div class="dph-ed-top"></div>
+      <a href="/products/dom-perignon-x-damien-hirst-vintage-2018-champagne-75cl"><img src="https://cdn.shopify.com/s/files/1/1624/5203/files/x-Damien_Hirst_Dom_Perignon_Champagne_2018_75cl_-_Champagne_France.jpg?v=1791837891&amp;width=800" alt="Dom Pérignon x Damien Hirst Vintage 2018 bottle and deep blue Kaleidoscope gift box" loading="lazy" width="800" height="800"></a>
+      <div class="dph-ed-body">
+        <div class="dph-eyebrow">The Blue · Vintage 2018</div>
+        <h3><a href="/products/dom-perignon-x-damien-hirst-vintage-2018-champagne-75cl">Dom Pérignon x Damien Hirst Vintage 2018 75cl</a></h3>
+        <p>A radiant, sun-filled vintage: a summery bouquet of orchard and tropical fruit, an apricot imprint and an ample palate. Dressed in Hirst's deep blue and violet.</p>
+        <div class="dph-price">£280</div>
+        <a class="dph-btn dph-dark" href="/products/dom-perignon-x-damien-hirst-vintage-2018-champagne-75cl">View Vintage 2018</a>
+      </div>
+    </article>
+    <article class="dph-ed pink">
+      <div class="dph-ed-top"></div>
+      <a href="/products/dom-perignon-x-damien-hirst-rose-2010-champagne-75cl"><img src="https://cdn.shopify.com/s/files/1/1624/5203/files/DOM-PERIGNON_x_Damien_Hirst_Dom_Perignon_Rose_2010_75cl_-_Champagne_France.jpg?v=1791837888&amp;width=800" alt="Dom Pérignon x Damien Hirst Rosé 2010 bottle beside its pink mandala-pattern Kaleidoscope gift box" loading="lazy" width="800" height="800"></a>
+      <div class="dph-ed-body">
+        <div class="dph-eyebrow">The Pink · Rosé 2010</div>
+        <h3><a href="/products/dom-perignon-x-damien-hirst-rose-2010-champagne-75cl">Dom Pérignon x Damien Hirst Rosé 2010 75cl</a></h3>
+        <p>A surprising rosé with a spherical presence: intense and precise, yet delicate and silky. Hirst's warm magenta and pink nod to the Pinot Noir at its heart.</p>
+        <div class="dph-price">£480</div>
+        <a class="dph-btn dph-dark" href="/products/dom-perignon-x-damien-hirst-rose-2010-champagne-75cl">View Rosé 2010</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="dph-tablewrap">
+    <table class="dph-table">
+      <thead><tr><th></th><th>Vintage 2018</th><th>Rosé 2010</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Hirst palette</th><td>Deep blue &amp; violet</td><td>Magenta, red &amp; pink</td></tr>
+        <tr><th scope="row">Style</th><td>Radiant, generous, fruit-led</td><td>Intense, precise, silky</td></tr>
+        <tr><th scope="row">On the nose</th><td>Orchard &amp; tropical fruit, apricot</td><td>Red fruit with a spherical, layered presence</td></tr>
+        <tr><th scope="row">Best for</th><td>Birthdays, corporate gifts, a first Dom Pérignon</td><td>Anniversaries, milestones, collectors</td></tr>
+        <tr><th scope="row">Price</th><td><a href="/products/dom-perignon-x-damien-hirst-vintage-2018-champagne-75cl">£280</a></td><td><a href="/products/dom-perignon-x-damien-hirst-rose-2010-champagne-75cl">£480</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="dph-small">Prices correct at time of writing; see each product page for the latest price and availability.</p>
+
+  <h2>The Collaboration</h2>
+  <p>Dom Pérignon has made vintage-only Champagne since 1936, capturing a single year in every cuvée. For its 2026 limited edition, the house invited British artist Damien Hirst to reinterpret its famous shield label. Hirst saw in its outline the shape of a butterfly wing, the motif at the heart of his <em>Kaleidoscope</em> works, and repeated it into a symmetrical, stained-glass pattern across the bottle and gift box. A black neck collar carries the words "Limited Edition" and Hirst's signature.</p>
+  <p>The result is a Champagne that is as much a collectible art object as a celebration bottle. It also joins a long line of Dom Pérignon artist editions, several of which you'll find below.</p>
+
+  <h2>Gift the Hirst with Caviar</h2>
+  <div class="dph-feature">
+    <a href="/products/the-hirst-prestige-hamper"><img src="https://cdn.shopify.com/s/files/1/1624/5203/files/IMG-6983.png?v=1792117940&amp;width=900" alt="The Hirst Prestige Hamper: Dom Pérignon x Damien Hirst Vintage 2018 with Royal Oscietra caviar and chocolate almonds" loading="lazy"></a>
+    <div>
+      <div class="dph-eyebrow">Hamper · £570</div>
+      <h3 style="font-size:1.4rem"><a href="/products/the-hirst-prestige-hamper">The Hirst Prestige Hamper</a></h3>
+      <p>The artist edition, the pearls and the chocolate, arriving together as one gift with your message inside.</p>
+      <ul>
+        <li>Dom Pérignon x Damien Hirst Vintage 2018, 75cl, in the Kaleidoscope box</li>
+        <li>30g Royal Oscietra caviar with mother-of-pearl spoon</li>
+        <li>Crème fraîche &amp; mini blinis</li>
+        <li>A bonbonnière of chocolate-coated almonds</li>
+      </ul>
+      <a class="dph-btn dph-dark" href="/products/the-hirst-prestige-hamper">Shop the Hirst Hamper</a>
+    </div>
+  </div>
+
+  <h2>More Dom Pérignon Artist Editions</h2>
+  <p>Collect the series. Dom Pérignon has partnered with artists and icons for years, and these editions are still on our shelves.</p>
+  <div class="dph-car" data-dph-carousel>
+    <div class="dph-nav" aria-hidden="true"><button type="button" data-dir="-1" aria-label="Previous">‹</button><button type="button" data-dir="1" aria-label="Next">›</button></div>
+    <div class="dph-track" tabindex="0" aria-label="Dom Pérignon artist editions">
+      <a class="dph-slide" href="/products/dom-perignon-takashi-murakami-edition-2015-75cl"><img src="https://cdn.shopify.com/s/files/1/1624/5203/files/Dom-Perignon-Takashi-Murakami-Edition-2015-75cl.jpg?v=1792029279&amp;width=500" alt="Dom Pérignon Takashi Murakami Edition 2015 with flower-artwork gift box" loading="lazy" width="500" height="500"><div><span class="dph-artist">Takashi Murakami</span><h3>Vintage 2015, Murakami Edition</h3><span class="dph-p">£340</span></div></a>
+      <a class="dph-slide" href="/products/dom-perignon-rose-vintage-2010-takashi-murakami-gift-box-75cl"><img src="https://cdn.shopify.com/s/files/1/1624/5203/files/Dom-Perignon_Rose_Vintage_2010_x_Murakami.jpg?v=1772048443&amp;width=500" alt="Dom Pérignon Rosé Vintage 2010 Takashi Murakami edition bottle and black gift box" loading="lazy" width="500" height="500"><div><span class="dph-artist">Takashi Murakami</span><h3>Rosé Vintage 2010, Murakami Edition</h3><span class="dph-p">£780</span> <span class="dph-low">· Last one</span></div></a>
+      <a class="dph-slide" href="/products/dom-perignon-2015-jean-michel-basquiat-green-75cl"><img src="https://cdn.shopify.com/s/files/1/1624/5203/files/Dom-Perignon-2015-Jean-Michel-Basquiat-Green-75cl.jpg?v=1792029300&amp;width=500" alt="Dom Pérignon 2015 Jean-Michel Basquiat Green edition" loading="lazy" width="500" height="500"><div><span class="dph-artist">Jean-Michel Basquiat</span><h3>Vintage 2015, Basquiat Green</h3><span class="dph-p">£350</span> <span class="dph-low">· Last one</span></div></a>
+      <a class="dph-slide" href="/products/dom-perignon-lenny-kravitz-limited-edition-vintage-2008-gift-box-75cl"><img src="https://cdn.shopify.com/s/files/1/1624/5203/files/dom-perignon-lenny-kravitz-limited-edition-vintage-2008-bottle.jpg?v=1784387254&amp;width=500" alt="Dom Pérignon Lenny Kravitz Limited Edition Vintage 2008 with hammered metal label" loading="lazy" width="500" height="500"><div><span class="dph-artist">Lenny Kravitz</span><h3>Vintage 2008, Lenny Kravitz Edition</h3><span class="dph-p">£420</span></div></a>
+      <a class="dph-slide" href="/products/dom-perignon-x-lady-gaga-dom-perignon-rose-2008"><img src="https://cdn.shopify.com/s/files/1/1624/5203/files/DomPerignonxLadyGagaDomPerignonRose2008.jpg?v=1787239415&amp;width=500" alt="Dom Pérignon x Lady Gaga Rosé 2008 bottle and packaging" loading="lazy" width="500" height="500"><div><span class="dph-artist">Lady Gaga</span><h3>Rosé 2008, Lady Gaga Edition</h3><span class="dph-p">£695</span> <span class="dph-low">· Only 2 left</span></div></a>
+    </div>
+  </div>
+
+  <h2>Caviar &amp; Dom Pérignon Hampers</h2>
+  <p>Champagne and caviar, ready to give. Every hamper comes gift-boxed with a personalised note and same-day London delivery.</p>
+  <div class="dph-car" data-dph-carousel>
+    <div class="dph-nav" aria-hidden="true"><button type="button" data-dir="-1" aria-label="Previous">‹</button><button type="button" data-dir="1" aria-label="Next">›</button></div>
+    <div class="dph-track" tabindex="0" aria-label="Caviar and Dom Pérignon hampers">
+      <a class="dph-slide" href="/products/the-hirst-prestige-hamper"><img src="https://cdn.shopify.com/s/files/1/1624/5203/files/IMG-6983.png?v=1792117940&amp;width=500" alt="The Hirst Prestige Hamper with Dom Pérignon x Damien Hirst 2018 and Oscietra caviar" loading="lazy" width="500" height="500"><div><span class="dph-artist">Damien Hirst · 2018</span><h3>The Hirst Prestige Hamper</h3><span class="dph-p">£570</span></div></a>
+      <a class="dph-slide" href="/products/dom-perignon-caviar-hamper"><img src="https://cdn.shopify.com/s/files/1/1624/5203/files/Dom-P_Hamper.jpg?v=1780918043&amp;width=500" alt="The Dom Pérignon &amp; Caviar Hamper with Dom Pérignon 2013 and Royal Oscietra caviar" loading="lazy" width="500" height="500"><div><span class="dph-artist">Dom Pérignon 2013</span><h3>The Dom Pérignon &amp; Caviar Hamper</h3><span class="dph-p">£480</span></div></a>
+      <a class="dph-slide" href="/products/the-dom-perignon-prestige-hamper"><img src="https://cdn.shopify.com/s/files/1/1624/5203/files/Dom-Perignon-Prestige-Hamper.jpg?v=1792029359&amp;width=500" alt="The Dom Pérignon Prestige Hamper with Lenny Kravitz Edition 2008 and Crème Oscietra caviar" loading="lazy" width="500" height="500"><div><span class="dph-artist">Lenny Kravitz · 2008</span><h3>The Dom Pérignon Prestige Hamper</h3><span class="dph-p">£650</span> <span class="dph-low">· Only 3 left</span></div></a>
+      <a class="dph-slide" href="/collections/caviar-champagne-gift-in-uk"><img src="https://cdn.shopify.com/s/files/1/1624/5203/collections/Dom-P_Hamper.jpg?v=1789732652&amp;width=500" alt="Caviar and champagne gifts collection" loading="lazy" width="500" height="500"><div><span class="dph-artist">Collection</span><h3>All Caviar &amp; Champagne Gifts</h3><span class="dph-p">Browse all →</span></div></a>
+    </div>
+  </div>
+
+  <h2>Dom Pérignon x Damien Hirst: FAQs</h2>
+  <div class="dph-faq">
+    <details open>
+      <summary>Can I get Dom Pérignon x Damien Hirst delivered in London today?</summary>
+      <p>Yes. Both the Vintage 2018 and Rosé 2010 editions are in stock for same-day delivery across London in 30–45 minutes, 24 hours a day. We also deliver next day across the UK mainland.</p>
+    </details>
+    <details>
+      <summary>What is the difference between the two Hirst editions?</summary>
+      <p>The Vintage 2018, in deep blue and violet, is radiant and fruit-led with orchard, tropical and apricot notes. The Rosé 2010, in magenta and pink, is intense, precise and silky. Both come in Hirst's Kaleidoscope gift box.</p>
+    </details>
+    <details>
+      <summary>Is the Damien Hirst Dom Pérignon a limited edition?</summary>
+      <p>Yes. It is Dom Pérignon's limited edition for 2026, and each bottle carries a "Limited Edition" neck collar with Damien Hirst's signature.</p>
+    </details>
+    <details>
+      <summary>Can I send it as a gift with caviar?</summary>
+      <p>Yes. The Hirst Prestige Hamper pairs the Vintage 2018 with 30g of Royal Oscietra caviar, a mother-of-pearl spoon, crème fraîche, mini blinis and chocolate almonds, with your personalised message inside.</p>
+    </details>
+  </div>
+
+  <div class="dph-hero" style="text-align:center;margin:2.6em 0 1em">
+    <h2 style="margin-top:0;color:#fff">Collect the Pair</h2>
+    <a class="dph-btn" href="/products/dom-perignon-x-damien-hirst-vintage-2018-champagne-75cl">Vintage 2018 · £280</a>
+    <a class="dph-btn dph-ghost" href="/products/dom-perignon-x-damien-hirst-rose-2010-champagne-75cl">Rosé 2010 · £480</a>
+  </div>
+
+  <p class="dph-small">More from the house: <a href="/collections/dom-perignon-champagne">all Dom Pérignon Champagne</a> · <a href="/collections/champagne-gifts">champagne gifts</a> · <a href="/pages/gifts-delivered-london">gifts delivered in London</a>. Please drink responsibly. We do not sell alcohol to anyone under 18.</p>
+</div>
+
+<script>
+  (function(){
+    document.querySelectorAll('[data-dph-carousel]').forEach(function(c){
+      var t=c.querySelector('.dph-track');
+      c.querySelectorAll('.dph-nav button').forEach(function(b){
+        b.addEventListener('click',function(){
+          var s=t.querySelector('.dph-slide');
+          var w=s?s.getBoundingClientRect().width+14:300;
+          t.scrollBy({left:w*Number(b.getAttribute('data-dir')),behavior:'smooth'});
+        });
+      });
+    });
+  })();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.drinkshouse247.co.uk/"},
+        {"@type": "ListItem", "position": 2, "name": "Dom Pérignon", "item": "https://www.drinkshouse247.co.uk/collections/dom-perignon-champagne"},
+        {"@type": "ListItem", "position": 3, "name": "Dom Pérignon x Damien Hirst", "item": "https://www.drinkshouse247.co.uk/pages/dom-perignon-damien-hirst"}
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Dom Pérignon x Damien Hirst Limited Editions",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Dom Pérignon x Damien Hirst Vintage 2018 Champagne 75cl", "url": "https://www.drinkshouse247.co.uk/products/dom-perignon-x-damien-hirst-vintage-2018-champagne-75cl"},
+        {"@type": "ListItem", "position": 2, "name": "Dom Pérignon x Damien Hirst Rosé 2010 Champagne 75cl", "url": "https://www.drinkshouse247.co.uk/products/dom-perignon-x-damien-hirst-rose-2010-champagne-75cl"},
+        {"@type": "ListItem", "position": 3, "name": "The Hirst Prestige Hamper", "url": "https://www.drinkshouse247.co.uk/products/the-hirst-prestige-hamper"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Can I get Dom Pérignon x Damien Hirst delivered in London today?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Both the Vintage 2018 and Rosé 2010 editions are in stock for same-day delivery across London in 30–45 minutes, 24 hours a day. We also deliver next day across the UK mainland."}},
+        {"@type": "Question", "name": "What is the difference between the two Hirst editions?", "acceptedAnswer": {"@type": "Answer", "text": "The Vintage 2018, in deep blue and violet, is radiant and fruit-led with orchard, tropical and apricot notes. The Rosé 2010, in magenta and pink, is intense, precise and silky. Both come in Hirst's Kaleidoscope gift box."}},
+        {"@type": "Question", "name": "Is the Damien Hirst Dom Pérignon a limited edition?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It is Dom Pérignon's limited edition for 2026, and each bottle carries a \"Limited Edition\" neck collar with Damien Hirst's signature."}},
+        {"@type": "Question", "name": "Can I send it as a gift with caviar?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The Hirst Prestige Hamper pairs the Vintage 2018 with 30g of Royal Oscietra caviar, a mother-of-pearl spoon, crème fraîche, mini blinis and chocolate almonds, with your personalised message inside."}}
+      ]
+    }
+  ]
+}
+</script>
