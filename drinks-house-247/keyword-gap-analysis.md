@@ -77,3 +77,18 @@ Buyers are already using the store for gifts, but there is no London gift hub to
 4. **Fix or retire the unpublished duplicates:** `champagne-same-day`, `champagne-delivery`, `alcohol-delivery-areas` and others.
    Either publish `alcohol-delivery-areas` as the hyper-local hub (cluster 11) or remove it.
 5. **Restore the Search Console data feed** (Supermetrics subscription, or connect Search Console directly) and re-run this analysis with real query data in about 4 weeks to measure the new page.
+
+## 5. Change log: 16 Oct 2026 (live in Shopify)
+
+| Change | Detail |
+|---|---|
+| Page published | `/pages/gifts-delivered-london`. Added free gift message, 4pm business cut-off, area-page links and a "More gift ideas & guides" block |
+| Main menu | Gifts & Hampers → Send a Gift: "Same-Day Gift Delivery London" (was → `/collections/alcohol-gift-sets`) is now **"Gifts Delivered in London" → new page**. Every other item is unchanged and verified |
+| Footer "Gift by Occasion" | New first item "Gifts Delivered in London"; "Christmas Gifts " renamed to "Christmas Gifts London" |
+| Collection descriptions (link to page appended, existing text kept) | christmas-gifts, corporate-gifts, alcohol-gift-sets, birthday-gifts, champagne-gifts (link inside the "every occasion" paragraph), gifts-hampers |
+| Page links re-pointed | `send-gift-uk` ("Same-Day Gift Delivery London" section) and `alcohol-delivery-as-a-gift` ("Send a Gift Same Day in London" H2 and a new in-text link) |
+| SEO titles | Christmas: `Christmas Gifts Delivered in London \| Drinks House 247`; Corporate: `Corporate Gifts London \| Same Day \| Drinks House 247`; Birthday: `Birthday Gifts Delivered in London \| Drinks House 247`; Gift Hampers: `Luxury Gift Hampers London \| Same Day \| Drinks House 247` |
+
+### Issue found, not yet fixed
+`/pages/alcohol-delivery-areas` is **unpublished**, but the main menu (twice) and the footer link to it,
+so those site-wide links probably show a 404. Fix: review and publish it, or re-point those three menu items.
