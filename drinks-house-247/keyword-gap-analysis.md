@@ -92,3 +92,11 @@ Buyers are already using the store for gifts, but there is no London gift hub to
 ### Issue found, not yet fixed
 `/pages/alcohol-delivery-areas` is **unpublished**, but the main menu (twice) and the footer link to it,
 so those site-wide links probably show a 404. Fix: review and publish it, or re-point those three menu items.
+
+## 6. Change log: Caymus 2022 → 2023 (16 Oct 2026)
+
+| Change | Detail |
+|---|---|
+| Caymus 2022 | Both variants set to "Deny" overselling and stock 0, so the product shows as sold out. The page stays live to keep its rankings |
+| Caymus 2023 (draft) | Duplicated from the 2022 at the same prices (£139 bottle; £750.60 case of 6, compare-at £834) with the 2022 photo for now. New description (`caymus-2023-product-description.html`), handle `caymus-vineyards-cabernet-sauvignon-2023`, SEO title and description, and SKUs `CAYMUS-CABSAUV2023-75CL` / `-CASE6` |
+| Pending | Stock quantity. Then: set stock, set Active, publish to Online Store, and swap the 2022 for the 2023 on the Caymus hub page, library vintage pages, collections and the 2022 product page |
