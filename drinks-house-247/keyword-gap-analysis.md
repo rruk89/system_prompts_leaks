@@ -70,7 +70,7 @@ Buyers are already using the store for gifts, but there is no London gift hub to
 1. **Publish the page** and add it to the main menu ("Gifts") and footer. Link to it from the homepage, `send-gift-uk`, `alcohol-delivery-as-a-gift` and `gifts-hampers`, using anchor text such as "gifts delivered in London".
 2. **Localise the occasion collection SEO titles** (title tag only; visible names can stay), for example
    `Christmas Gifts Delivered in London | Drinks House 247` and `Corporate Gifts London | Drinks House 247`.
-   Do Christmas and Corporate this week, before the seasonal peak.
+   ✅ Done 16 Oct 2026: Christmas → `Christmas Gifts Delivered in London | Drinks House 247`; Corporate → `Corporate Gifts London | Same Day | Drinks House 247`. The landing page is also created as an unpublished draft in Shopify.
 3. **Consolidate the "near me / 24 hour" pages.** Pick one winner per phrase and 301-redirect the rest
    (start with `alcohol-delivery-24-hours-1` → `alcohol-delivery-24-hours` and
    `wine-and-champagne-delivery-in-london-1` → `wine-and-champagne-delivery-in-london`).
