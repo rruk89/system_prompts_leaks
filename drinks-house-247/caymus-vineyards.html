@@ -1,0 +1,380 @@
+<!--
+  Drinks House 247: Caymus Vineyards landing page (infographic)
+  Shopify Admin > Online Store > Pages (edit in HTML view only)
+
+  Page title:        Caymus Vineyards
+  URL handle:        caymus-vineyards
+  SEO title:         Caymus Cabernet Sauvignon | Vintages 1993–2022 | London
+  Meta description:  Four vintages of Caymus Napa Valley Cabernet, from library 1993 to the 50th-anniversary 2022. Compare how they age, then get same-day London delivery.
+-->
+<style>
+  .cym{--ink:#1c1416;--muted:#6b5f62;--line:#ebe3e4;--bg:#fbf8f7;--wine:#8c1f3a;--wine-d:#5a1226;--track:#f1e7e9;--gold:#b08d57;color:var(--ink);line-height:1.6;max-width:1140px;margin:0 auto;padding:0 16px}
+  .cym h1{font-size:clamp(1.9rem,4.6vw,3.1rem);line-height:1.12;margin:.25em 0 .35em;letter-spacing:-.01em}
+  .cym h2{font-size:clamp(1.4rem,3vw,2rem);line-height:1.2;margin:2.4em 0 .4em}
+  .cym h3{font-size:1.05rem;margin:0 0 .25em;line-height:1.3}
+  .cym p{margin:0 0 1em}
+  .cym a{color:inherit}
+  .cym-sub{color:var(--muted);max-width:720px}
+  .cym-eyebrow{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--gold)}
+  .cym-small{font-size:.85rem;color:var(--muted)}
+  .cym-hero{border-radius:16px;padding:40px 28px;margin-top:16px;color:#fff;background:radial-gradient(120% 140% at 0% 0%,#a3304c 0%,var(--wine) 38%,var(--wine-d) 100%)}
+  .cym-hero p{max-width:700px;font-size:1.08rem;opacity:.95}
+  .cym-btn{display:inline-block;text-decoration:none;font-weight:600;padding:12px 22px;border-radius:999px;margin:6px 8px 6px 0;background:#fff;color:var(--ink) !important}
+  .cym-btn.ghost{background:transparent;color:#fff !important;border:1.5px solid rgba(255,255,255,.8)}
+  .cym-btn.dark{background:var(--ink);color:#fff !important}
+  /* stat tiles */
+  .cym-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:18px 0 0}
+  .cym-stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .cym-stat b{display:block;font-size:2rem;line-height:1.1;color:var(--ink);font-variant-numeric:tabular-nums}
+  .cym-stat span{font-size:.88rem;color:var(--muted)}
+  /* timeline */
+  .cym-tl{position:relative;margin:28px 0 8px;height:150px}
+  .cym-tl-line{position:absolute;left:0;right:0;top:74px;height:2px;background:var(--line)}
+  .cym-tl-pt{position:absolute;top:0;transform:translateX(-50%);width:120px;text-align:center;height:150px}
+  .cym-tl-pt i{position:absolute;left:50%;top:69px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--wine);box-shadow:0 0 0 2px #fff}
+  .cym-tl-pt.found i{background:#fff;border:2px solid var(--wine);width:10px;height:10px;margin-left:-7px}
+  .cym-tl-pt .lbl{position:absolute;left:0;right:0;font-size:.82rem;color:var(--muted);line-height:1.3}
+  .cym-tl-pt .lbl b{display:block;color:var(--ink);font-size:1rem}
+  .cym-tl-pt.up .lbl{bottom:92px}
+  .cym-tl-pt.down .lbl{top:92px}
+  @media (max-width:640px){
+    .cym-tl{height:auto;margin-left:8px}
+    .cym-tl-line{left:5px;right:auto;top:6px;bottom:6px;width:2px;height:auto}
+    .cym-tl-pt{position:relative;left:auto !important;transform:none;width:auto;height:auto;padding:0 0 18px 28px;text-align:left}
+    .cym-tl-pt i{left:6px;top:5px}
+    .cym-tl-pt .lbl{position:static}
+  }
+  /* carousel */
+  .cym-nav{display:flex;gap:8px;justify-content:flex-end;margin:-4px 0 8px}
+  .cym-nav button{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:1.15rem;line-height:1;color:var(--ink)}
+  .cym-nav button:hover{border-color:var(--wine)}
+  .cym-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,1fr);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 14px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+  @media (min-width:1000px){.cym-track{grid-auto-columns:calc((100% - 42px)/4)}}
+  .cym-card{scroll-snap-align:start;border:1px solid var(--line);border-radius:14px;background:#fff;display:flex;flex-direction:column;overflow:hidden}
+  .cym-card-img{display:block;background:var(--bg);position:relative}
+  .cym-card-img img{display:block;width:100%;height:240px;object-fit:contain;padding:12px;box-sizing:border-box}
+  .cym-age{position:absolute;top:10px;left:10px;background:var(--wine);color:#fff;font-size:.75rem;font-weight:600;padding:4px 10px;border-radius:999px}
+  .cym-card-body{padding:14px 16px 18px;display:flex;flex-direction:column;flex:1}
+  .cym-year{font-size:2.2rem;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+  .cym-chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+  .cym-chips span{background:var(--track);border-radius:6px;padding:3px 8px;font-size:.76rem}
+  .cym-mini{display:grid;gap:6px;margin:4px 0 12px}
+  .cym-mini div{display:grid;grid-template-columns:64px 1fr 26px;align-items:center;gap:8px;font-size:.78rem;color:var(--muted)}
+  .cym-mini em{display:block;height:6px;background:var(--track);border-radius:4px;overflow:hidden;font-style:normal}
+  .cym-mini em s{display:block;height:100%;background:var(--wine);border-radius:0 4px 4px 0;text-decoration:none}
+  .cym-mini b{font-weight:600;color:var(--ink);text-align:right;font-variant-numeric:tabular-nums}
+  .cym-price{font-weight:700;font-size:1.15rem;margin:auto 0 .2em}
+  .cym-stock{font-size:.8rem;color:var(--muted);margin-bottom:10px}
+  .cym-card .cym-btn{align-self:flex-start;margin:0}
+  /* profile matrix chart */
+  .cym-fig{border:1px solid var(--line);border-radius:14px;padding:20px 18px;background:#fff;margin:14px 0}
+  .cym-fig-title{font-weight:700;margin:0 0 2px}
+  .cym-matrix{display:grid;grid-template-columns:110px repeat(4,1fr);gap:10px 14px;align-items:center;margin-top:14px}
+  .cym-matrix .hd{font-size:.82rem;color:var(--muted);font-weight:600;text-align:left}
+  .cym-matrix .hd b{display:block;color:var(--ink);font-size:1rem}
+  .cym-matrix .rl{font-size:.88rem;color:var(--ink)}
+  .cym-cell{position:relative;display:flex;align-items:center;gap:6px}
+  .cym-cell .tr{flex:1;height:10px;background:var(--track);border-radius:0 5px 5px 0;overflow:hidden}
+  .cym-cell .tr s{display:block;height:100%;background:var(--wine);border-radius:0 4px 4px 0;text-decoration:none}
+  .cym-cell .v{font-size:.78rem;color:var(--muted);width:22px;text-align:right;font-variant-numeric:tabular-nums}
+  .cym-cell .tip{position:absolute;bottom:130%;left:0;background:var(--ink);color:#fff;font-size:.75rem;padding:4px 8px;border-radius:6px;white-space:nowrap;display:none;pointer-events:none;z-index:2}
+  .cym-cell:hover .tip,.cym-cell:focus .tip{display:block}
+  .cym-matrix .cym-cell:nth-child(5n) .tip{left:auto;right:0}
+  .cym-cell:hover .tr{outline:2px solid var(--track);outline-offset:1px}
+  @media (max-width:640px){.cym-matrix{grid-template-columns:76px repeat(4,1fr);gap:8px 8px}.cym-cell .v{display:none}.cym-matrix .hd{font-size:.72rem}}
+  /* horizontal bars */
+  .cym-hbars{display:grid;gap:10px;margin-top:14px}
+  .cym-hbar{display:grid;grid-template-columns:64px 1fr;align-items:center;gap:12px;position:relative}
+  .cym-hbar .y{font-weight:700;font-variant-numeric:tabular-nums}
+  .cym-hbar .tr{display:flex;align-items:center;height:22px;padding-right:84px}
+  .cym-hbar .tr s{display:block;flex:0 0 auto;height:100%;background:var(--wine);border-radius:0 4px 4px 0;text-decoration:none;min-width:4px}
+  .cym-hbar .tr span{font-size:.85rem;color:var(--ink);white-space:nowrap;padding-left:8px}
+  .cym-axis{display:grid;grid-template-columns:64px 1fr;gap:12px;margin-top:6px;font-size:.75rem;color:var(--muted)}
+  .cym-axis div:last-child{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:4px}
+  .cym-table{width:100%;border-collapse:collapse;font-size:.88rem;margin-top:10px}
+  .cym-table th,.cym-table td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left}
+  .cym-table td{font-variant-numeric:tabular-nums}
+  .cym-fig details{margin-top:12px}
+  .cym-fig summary{cursor:pointer;font-size:.85rem;color:var(--muted)}
+  /* chooser + serving */
+  .cym-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+  .cym-tile{border:1px solid var(--line);border-radius:12px;padding:16px;background:#fff;text-decoration:none;display:block}
+  .cym-tile:hover{border-color:var(--wine)}
+  .cym-tile p{color:var(--muted);font-size:.93rem;margin:0}
+  .cym-tile .go{display:inline-block;margin-top:8px;font-weight:600;font-size:.9rem;color:var(--wine)}
+  .cym-serve{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+  .cym-serve div{background:var(--bg);border-radius:12px;padding:16px;text-align:center}
+  .cym-serve b{display:block;font-size:1.6rem;color:var(--wine-d);line-height:1.2}
+  .cym-serve span{font-size:.88rem;color:var(--muted)}
+  .cym-faq details{border-bottom:1px solid var(--line);padding:12px 0}
+  .cym-faq summary{font-weight:600;cursor:pointer}
+  .cym-faq details p{margin:.6em 0 0;color:var(--muted)}
+</style>
+
+<div class="cym">
+
+  <nav class="cym-small" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/collections/napa-valley">Napa Valley</a> › Caymus Vineyards</nav>
+
+  <section class="cym-hero">
+    <div class="cym-eyebrow">Rutherford · Napa Valley · Est. 1972</div>
+    <h1>Caymus Vineyards Cabernet Sauvignon</h1>
+    <p>Four vintages of one of Napa's most famous Cabernets, from a 33-year-old <strong>1993</strong> library bottle to the <strong>2022 50th-anniversary</strong> release. See how Caymus changes as it ages, pick your year, and get it delivered across London in <strong>30–45 minutes, 24/7</strong>.</p>
+    <a class="cym-btn" href="#cym-vintages">Compare the Vintages</a>
+    <a class="cym-btn ghost" href="/products/caymus-vineyards-cabernet-sauvignon-2022">Shop the 2022</a>
+  </section>
+
+  <div class="cym-stats" aria-label="Caymus in numbers">
+    <div class="cym-stat"><b>1972</b><span>Founded in Rutherford by Chuck Wagner with his parents, Lorna &amp; Charlie Sr.</span></div>
+    <div class="cym-stat"><b>240</b><span>Cases in the very first release</span></div>
+    <div class="cym-stat"><b>50<small style="font-size:.5em">th</small></b><span>Anniversary vintage: 2022</span></div>
+    <div class="cym-stat"><b>29 yrs</b><span>Spanned by the four vintages we stock, 1993 to 2022</span></div>
+  </div>
+
+  <h2>The Caymus Timeline</h2>
+  <p class="cym-sub">The family has made Napa Valley Cabernet Sauvignon every year since 1972. Our four bottles are marked on the line.</p>
+  <div class="cym-tl" role="list" aria-label="Caymus timeline from 1972 to 2022">
+    <div class="cym-tl-line"></div>
+    <div class="cym-tl-pt found up" style="left:4%" role="listitem"><i></i><div class="lbl"><b>1972</b>Caymus founded, 240 cases</div></div>
+    <div class="cym-tl-pt down" style="left:42.6%" role="listitem"><i></i><div class="lbl"><b>1993</b>Library vintage</div></div>
+    <div class="cym-tl-pt up" style="left:46.3%" role="listitem"><i></i><div class="lbl"><b>1995</b>Library vintage</div></div>
+    <div class="cym-tl-pt down" style="left:61%" role="listitem"><i></i><div class="lbl"><b>2003</b>Mature vintage</div></div>
+    <div class="cym-tl-pt up" style="left:96%" role="listitem"><i></i><div class="lbl"><b>2022</b>50th anniversary</div></div>
+  </div>
+
+  <h2 id="cym-vintages">Choose Your Vintage</h2>
+  <p class="cym-sub">Swipe through the cellar, oldest first. Each card shows the bottle's age, its tasting notes and our tasting profile (0–100).</p>
+  <div data-cym-carousel>
+    <div class="cym-nav" aria-hidden="true"><button type="button" data-dir="-1" aria-label="Previous">‹</button><button type="button" data-dir="1" aria-label="Next">›</button></div>
+    <div class="cym-track" tabindex="0" aria-label="Caymus vintages">
+
+      <article class="cym-card">
+        <a class="cym-card-img" href="/products/caymus-vineyards-cabernet-sauvignon-1993"><img src="https://cdn.shopify.com/s/files/1/1624/5203/files/FullSizeRender_018dbfa0-14cd-48bb-9cb9-dad36aa94f46.jpg?v=1792179065&amp;width=500" alt="Caymus Vineyards Napa Valley Cabernet Sauvignon 1993 bottle" loading="lazy"><span class="cym-age">33 years old</span></a>
+        <div class="cym-card-body">
+          <div class="cym-year">1993</div>
+          <h3><a href="/products/caymus-vineyards-cabernet-sauvignon-1993">Caymus Cabernet Sauvignon 1993</a></h3>
+          <div class="cym-chips"><span>Dried cherry</span><span>Cedar</span><span>Tobacco leaf</span><span>Leather</span></div>
+          <div class="cym-mini" aria-label="Tasting profile">
+            <div>Fruit<em><s style="width:55%"></s></em><b>55</b></div>
+            <div>Body<em><s style="width:70%"></s></em><b>70</b></div>
+            <div>Tannin<em><s style="width:45%"></s></em><b>45</b></div>
+          </div>
+          <div class="cym-price">£240</div>
+          <div class="cym-stock">Library bottle · limited stock</div>
+          <a class="cym-btn dark" href="/products/caymus-vineyards-cabernet-sauvignon-1993">View 1993</a>
+        </div>
+      </article>
+
+      <article class="cym-card">
+        <a class="cym-card-img" href="/products/caymus-vineyards-cabernet-sauvignon-1995"><img src="https://cdn.shopify.com/s/files/1/1624/5203/files/FullSizeRender_fb3b49cb-8d88-4af5-b6d9-226ce96d30df.jpg?v=1792178911&amp;width=500" alt="Caymus Vineyards Napa Valley Cabernet Sauvignon 1995 bottle" loading="lazy"><span class="cym-age">31 years old</span></a>
+        <div class="cym-card-body">
+          <div class="cym-year">1995</div>
+          <h3><a href="/products/caymus-vineyards-cabernet-sauvignon-1995">Caymus Cabernet Sauvignon 1995</a></h3>
+          <div class="cym-chips"><span>Dried blackcurrant</span><span>Cedar</span><span>Cigar box</span><span>Earth</span></div>
+          <div class="cym-mini" aria-label="Tasting profile">
+            <div>Fruit<em><s style="width:60%"></s></em><b>60</b></div>
+            <div>Body<em><s style="width:70%"></s></em><b>70</b></div>
+            <div>Tannin<em><s style="width:50%"></s></em><b>50</b></div>
+          </div>
+          <div class="cym-price">£260</div>
+          <div class="cym-stock">Library bottle · last one</div>
+          <a class="cym-btn dark" href="/products/caymus-vineyards-cabernet-sauvignon-1995">View 1995</a>
+        </div>
+      </article>
+
+      <article class="cym-card">
+        <a class="cym-card-img" href="/products/caymus-vineyards-cabernet-sauvignon-2003"><img src="https://cdn.shopify.com/s/files/1/1624/5203/files/FullSizeRender_b19132aa-43b0-4676-93df-6b3bbc060752.jpg?v=1792179208&amp;width=500" alt="Caymus Vineyards Napa Valley Cabernet Sauvignon 2003 bottle" loading="lazy"><span class="cym-age">23 years old</span></a>
+        <div class="cym-card-body">
+          <div class="cym-year">2003</div>
+          <h3><a href="/products/caymus-vineyards-cabernet-sauvignon-2003">Caymus Cabernet Sauvignon 2003</a></h3>
+          <div class="cym-chips"><span>Blackberry</span><span>Dried plum</span><span>Cocoa</span><span>Cedar</span></div>
+          <div class="cym-mini" aria-label="Tasting profile">
+            <div>Fruit<em><s style="width:68%"></s></em><b>68</b></div>
+            <div>Body<em><s style="width:70%"></s></em><b>70</b></div>
+            <div>Tannin<em><s style="width:58%"></s></em><b>58</b></div>
+          </div>
+          <div class="cym-price">£425</div>
+          <div class="cym-stock">Mature bottle · limited stock</div>
+          <a class="cym-btn dark" href="/products/caymus-vineyards-cabernet-sauvignon-2003">View 2003</a>
+        </div>
+      </article>
+
+      <article class="cym-card">
+        <a class="cym-card-img" href="/products/caymus-vineyards-cabernet-sauvignon-2022"><img src="https://cdn.shopify.com/s/files/1/1624/5203/files/Caymus-Cabernet-Sauvignon-2022-75cl.webp?v=1792029018&amp;width=500" alt="Caymus Vineyards Cabernet Sauvignon 2022 50th anniversary bottle" loading="lazy"><span class="cym-age">50th anniversary</span></a>
+        <div class="cym-card-body">
+          <div class="cym-year">2022</div>
+          <h3><a href="/products/caymus-vineyards-cabernet-sauvignon-2022">Caymus Cabernet Sauvignon 2022</a></h3>
+          <div class="cym-chips"><span>Blackberry</span><span>Cassis</span><span>Cocoa</span><span>Vanilla</span></div>
+          <div class="cym-mini" aria-label="Tasting profile">
+            <div>Fruit<em><s style="width:80%"></s></em><b>80</b></div>
+            <div>Body<em><s style="width:85%"></s></em><b>85</b></div>
+            <div>Tannin<em><s style="width:65%"></s></em><b>65</b></div>
+          </div>
+          <div class="cym-price">£139</div>
+          <div class="cym-stock">95 pts Natalie MacLean · case of 6 saves 10%</div>
+          <a class="cym-btn dark" href="/products/caymus-vineyards-cabernet-sauvignon-2022">View 2022</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <h2>How Caymus Changes With Age</h2>
+  <p class="cym-sub">The same estate and the same grape, at four different ages. As Caymus matures, its ripe fruit and firm tannin soften into dried fruit, cedar and savoury notes.</p>
+  <figure class="cym-fig" style="margin-left:0;margin-right:0">
+    <p class="cym-fig-title">Tasting profile by vintage</p>
+    <p class="cym-small" style="margin:0">Drinks House 247 tasting scores, 0–100. Higher means more pronounced.</p>
+    <div class="cym-matrix" role="img" aria-label="Fruit, oak and spice, body and tannin scores for the 1993, 1995, 2003 and 2022 vintages. Details in the table below.">
+      <div></div>
+      <div class="hd"><b>1993</b>33 yrs</div><div class="hd"><b>1995</b>31 yrs</div><div class="hd"><b>2003</b>23 yrs</div><div class="hd"><b>2022</b>4 yrs</div>
+
+      <div class="rl">Fruit</div>
+      <div class="cym-cell" tabindex="0"><div class="tr"><s style="width:55%"></s></div><span class="v">55</span><span class="tip">1993 · Fruit 55</span></div>
+      <div class="cym-cell" tabindex="0"><div class="tr"><s style="width:60%"></s></div><span class="v">60</span><span class="tip">1995 · Fruit 60</span></div>
+      <div class="cym-cell" tabindex="0"><div class="tr"><s style="width:68%"></s></div><span class="v">68</span><span class="tip">2003 · Fruit 68</span></div>
+      <div class="cym-cell" tabindex="0"><div class="tr"><s style="width:80%"></s></div><span class="v">80</span><span class="tip">2022 · Fruit 80</span></div>
+
+      <div class="rl">Oak &amp; spice</div>
+      <div class="cym-cell" tabindex="0"><div class="tr"><s style="width:55%"></s></div><span class="v">55</span><span class="tip">1993 · Oak &amp; spice 55</span></div>
+      <div class="cym-cell" tabindex="0"><div class="tr"><s style="width:55%"></s></div><span class="v">55</span><span class="tip">1995 · Oak &amp; spice 55</span></div>
+      <div class="cym-cell" tabindex="0"><div class="tr"><s style="width:60%"></s></div><span class="v">60</span><span class="tip">2003 · Oak &amp; spice 60</span></div>
+      <div class="cym-cell" tabindex="0"><div class="tr"><s style="width:65%"></s></div><span class="v">65</span><span class="tip">2022 · Oak &amp; spice 65</span></div>
+
+      <div class="rl">Body</div>
+      <div class="cym-cell" tabindex="0"><div class="tr"><s style="width:70%"></s></div><span class="v">70</span><span class="tip">1993 · Body 70</span></div>
+      <div class="cym-cell" tabindex="0"><div class="tr"><s style="width:70%"></s></div><span class="v">70</span><span class="tip">1995 · Body 70</span></div>
+      <div class="cym-cell" tabindex="0"><div class="tr"><s style="width:70%"></s></div><span class="v">70</span><span class="tip">2003 · Body 70</span></div>
+      <div class="cym-cell" tabindex="0"><div class="tr"><s style="width:85%"></s></div><span class="v">85</span><span class="tip">2022 · Body 85</span></div>
+
+      <div class="rl">Tannin</div>
+      <div class="cym-cell" tabindex="0"><div class="tr"><s style="width:45%"></s></div><span class="v">45</span><span class="tip">1993 · Tannin 45</span></div>
+      <div class="cym-cell" tabindex="0"><div class="tr"><s style="width:50%"></s></div><span class="v">50</span><span class="tip">1995 · Tannin 50</span></div>
+      <div class="cym-cell" tabindex="0"><div class="tr"><s style="width:58%"></s></div><span class="v">58</span><span class="tip">2003 · Tannin 58</span></div>
+      <div class="cym-cell" tabindex="0"><div class="tr"><s style="width:65%"></s></div><span class="v">65</span><span class="tip">2022 · Tannin 65</span></div>
+    </div>
+    <details>
+      <summary>Show as a table</summary>
+      <table class="cym-table">
+        <thead><tr><th>Vintage</th><th>Fruit</th><th>Oak &amp; spice</th><th>Body</th><th>Tannin</th></tr></thead>
+        <tbody>
+          <tr><td>1993</td><td>55</td><td>55</td><td>70</td><td>45</td></tr>
+          <tr><td>1995</td><td>60</td><td>55</td><td>70</td><td>50</td></tr>
+          <tr><td>2003</td><td>68</td><td>60</td><td>70</td><td>58</td></tr>
+          <tr><td>2022</td><td>80</td><td>65</td><td>85</td><td>65</td></tr>
+        </tbody>
+      </table>
+    </details>
+  </figure>
+
+  <figure class="cym-fig" style="margin-left:0;margin-right:0">
+    <p class="cym-fig-title">Years in bottle (as of 2026)</p>
+    <div class="cym-hbars" role="img" aria-label="1993 is 33 years old, 1995 is 31, 2003 is 23 and 2022 is 4.">
+      <div class="cym-hbar"><span class="y">1993</span><div class="tr"><s style="width:94.3%"></s><span>33 years</span></div></div>
+      <div class="cym-hbar"><span class="y">1995</span><div class="tr"><s style="width:88.6%"></s><span>31 years</span></div></div>
+      <div class="cym-hbar"><span class="y">2003</span><div class="tr"><s style="width:65.7%"></s><span>23 years</span></div></div>
+      <div class="cym-hbar"><span class="y">2022</span><div class="tr"><s style="width:11.4%"></s><span>4 years</span></div></div>
+    </div>
+  </figure>
+
+  <h2>Which Caymus Should You Choose?</h2>
+  <div class="cym-grid">
+    <a class="cym-tile" href="/products/caymus-vineyards-cabernet-sauvignon-1993"><h3>A birth-year or anniversary gift</h3><p>Born in 1993 or 1995, or celebrating 30 years together? A library Caymus from that year is a gift that can't be repeated.</p><span class="go">1993 · 1995 →</span></a>
+    <a class="cym-tile" href="/products/caymus-vineyards-cabernet-sauvignon-2003"><h3>Mature, but still generous</h3><p>The 2003 keeps more of Caymus's ripe fruit while gaining cedar and savoury depth. A good first old Napa Cabernet.</p><span class="go">2003 →</span></a>
+    <a class="cym-tile" href="/products/caymus-vineyards-cabernet-sauvignon-2022"><h3>Steak tonight, or a case for the cellar</h3><p>The 50th-anniversary 2022 is rich and ready now with a ribeye, and the case of 6 saves 10%.</p><span class="go">2022 →</span></a>
+  </div>
+
+  <h2>How to Serve Caymus</h2>
+  <div class="cym-serve">
+    <div><b>16–18°C</b><span>Serve slightly below room temperature</span></div>
+    <div><b>24 hrs</b><span>Stand old bottles upright to settle the sediment</span></div>
+    <div><b>Decant</b><span>Pour library vintages gently off the sediment just before serving</span></div>
+    <div><b>Ribeye</b><span>The classic match; roast duck and aged cheese for older vintages</span></div>
+  </div>
+  <p class="cym-small" style="margin-top:10px">More pairings: <a href="/collections/wines-that-pair-with-steak">wines that pair with steak</a> · <a href="/collections/wines-that-pair-with-lamb">wines that pair with lamb</a>.</p>
+
+  <h2>About Caymus Vineyards</h2>
+  <p>Caymus Vineyards was founded in Rutherford, in the heart of Napa Valley, in 1972 by Chuck Wagner with his parents, Lorna and Charlie Sr. The first release was just 240 cases. The family has made Napa Valley Cabernet Sauvignon every year since, sourcing fruit from across Napa's sub-appellations, from cooler Coombsville in the south to warmer Calistoga in the north, plus Rutherford and Oakville. Caymus is still 100% family-run, with the next generation of Wagners now involved in farming and winemaking.</p>
+  <p>Explore more from California: <a href="/collections/napa-valley">Napa Valley wines</a> · <a href="/collections/cabernet-sauvignon">Cabernet Sauvignon</a> · <a href="/collections/wines-from-usa">wines from the USA</a> · <a href="/collections/vintage-wine">vintage wine gifts</a>.</p>
+
+  <h2>Caymus: FAQs</h2>
+  <div class="cym-faq">
+    <details open>
+      <summary>Can I get Caymus delivered in London today?</summary>
+      <p>Yes. Every Caymus vintage here can be delivered across London in 30–45 minutes, 24 hours a day, with next-day delivery across the UK mainland.</p>
+    </details>
+    <details>
+      <summary>Which Caymus vintages do you stock?</summary>
+      <p>We currently stock Caymus Napa Valley Cabernet Sauvignon 1993, 1995, 2003 and the 50th-anniversary 2022. The older vintages are library bottles in limited quantities.</p>
+    </details>
+    <details>
+      <summary>Is an old Caymus still good to drink?</summary>
+      <p>Mature Napa Cabernet can drink well at 20 to 30 years old, but every old bottle is individual, since its condition depends on how it was stored. Expect a softer, more savoury wine than a current release.</p>
+    </details>
+    <details>
+      <summary>Why is the 2022 Caymus special?</summary>
+      <p>2022 is Caymus's 50th-anniversary vintage, and it scored 95 points from Natalie MacLean.</p>
+    </details>
+    <details>
+      <summary>Does Caymus make a good gift?</summary>
+      <p>Yes. A library Caymus makes a memorable birth-year or anniversary present, and the 2022 is a crowd-pleasing gift for anyone who loves big, ripe red wine. Add a free personalised message at checkout.</p>
+    </details>
+  </div>
+
+  <div class="cym-hero" style="text-align:center;margin:2.6em 0 1em">
+    <h2 style="margin-top:0;color:#fff">Four Vintages, Delivered Tonight</h2>
+    <a class="cym-btn" href="#cym-vintages">Compare the Vintages</a>
+    <a class="cym-btn ghost" href="/pages/gifts-delivered-london">Gifts Delivered in London</a>
+  </div>
+
+  <p class="cym-small">Prices correct at time of writing; see each product page for the latest price and availability. Please drink responsibly. We do not sell alcohol to anyone under 18.</p>
+</div>
+
+<script>
+  (function(){
+    document.querySelectorAll('[data-cym-carousel]').forEach(function(c){
+      var t=c.querySelector('.cym-track');
+      c.querySelectorAll('.cym-nav button').forEach(function(b){
+        b.addEventListener('click',function(){
+          var s=t.querySelector('.cym-card');
+          var w=s?s.getBoundingClientRect().width+14:300;
+          t.scrollBy({left:w*Number(b.getAttribute('data-dir')),behavior:'smooth'});
+        });
+      });
+    });
+  })();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.drinkshouse247.co.uk/"},
+        {"@type": "ListItem", "position": 2, "name": "Napa Valley", "item": "https://www.drinkshouse247.co.uk/collections/napa-valley"},
+        {"@type": "ListItem", "position": 3, "name": "Caymus Vineyards", "item": "https://www.drinkshouse247.co.uk/pages/caymus-vineyards"}
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Caymus Vineyards Cabernet Sauvignon vintages",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Caymus Vineyards Cabernet Sauvignon 1993 75cl", "url": "https://www.drinkshouse247.co.uk/products/caymus-vineyards-cabernet-sauvignon-1993"},
+        {"@type": "ListItem", "position": 2, "name": "Caymus Vineyards Cabernet Sauvignon 1995 75cl", "url": "https://www.drinkshouse247.co.uk/products/caymus-vineyards-cabernet-sauvignon-1995"},
+        {"@type": "ListItem", "position": 3, "name": "Caymus Vineyards Cabernet Sauvignon 2003 75cl", "url": "https://www.drinkshouse247.co.uk/products/caymus-vineyards-cabernet-sauvignon-2003"},
+        {"@type": "ListItem", "position": 4, "name": "Caymus Vineyards Cabernet Sauvignon 2022 75cl", "url": "https://www.drinkshouse247.co.uk/products/caymus-vineyards-cabernet-sauvignon-2022"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Can I get Caymus delivered in London today?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Every Caymus vintage here can be delivered across London in 30–45 minutes, 24 hours a day, with next-day delivery across the UK mainland."}},
+        {"@type": "Question", "name": "Which Caymus vintages do you stock?", "acceptedAnswer": {"@type": "Answer", "text": "We currently stock Caymus Napa Valley Cabernet Sauvignon 1993, 1995, 2003 and the 50th-anniversary 2022. The older vintages are library bottles in limited quantities."}},
+        {"@type": "Question", "name": "Is an old Caymus still good to drink?", "acceptedAnswer": {"@type": "Answer", "text": "Mature Napa Cabernet can drink well at 20 to 30 years old, but every old bottle is individual, since its condition depends on how it was stored. Expect a softer, more savoury wine than a current release."}},
+        {"@type": "Question", "name": "Why is the 2022 Caymus special?", "acceptedAnswer": {"@type": "Answer", "text": "2022 is Caymus's 50th-anniversary vintage, and it scored 95 points from Natalie MacLean."}},
+        {"@type": "Question", "name": "Does Caymus make a good gift?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A library Caymus makes a memorable birth-year or anniversary present, and the 2022 is a crowd-pleasing gift for anyone who loves big, ripe red wine. Add a free personalised message at checkout."}}
+      ]
+    }
+  ]
+}
+</script>
