@@ -100,3 +100,11 @@ so those site-wide links probably show a 404. Fix: review and publish it, or re-
 | Caymus 2022 | Both variants set to "Deny" overselling and stock 0, so the product shows as sold out. The page stays live to keep its rankings |
 | Caymus 2023 (draft) | Duplicated from the 2022 at the same prices (£139 bottle; £750.60 case of 6, compare-at £834) with the 2022 photo for now. New description (`caymus-2023-product-description.html`), handle `caymus-vineyards-cabernet-sauvignon-2023`, SEO title and description, and SKUs `CAYMUS-CABSAUV2023-75CL` / `-CASE6` |
 | Pending | Stock quantity. Then: set stock, set Active, publish to Online Store, and swap the 2022 for the 2023 on the Caymus hub page, library vintage pages, collections and the 2022 product page |
+
+## 7. Change log: Viña Tondonia Reserva 2011 → 2014 (16 Oct 2026)
+
+| Change | Detail |
+|---|---|
+| Tondonia Reserva 2011 75cl (`/products/vinos-finos-de-rioja`) | Stock set from 1 to 0, with overselling off, so it shows as sold out. The page stays live |
+| Tondonia Reserva 2014 75cl (draft) | Duplicated from the 2011 with the 2011 photo. Price £138, SKU `TONDONIA-RESERVA14-75CL`, handle `lopez-de-heredia-vina-tondonia-tinto-reserva-2014-75cl`. New description (`tondonia-reserva-2014-product-description.html`: 95 pts Wine Advocate, 2014 tasting notes and blend, a 2011 comparison question, and links to Cubillo 2014 and the Rioja collection) plus a new SEO title and description |
+| Pending | Stock quantity, then set it Active and publish to the Online Store |
