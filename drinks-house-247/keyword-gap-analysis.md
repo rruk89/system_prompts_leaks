@@ -162,3 +162,12 @@ Links to the old `wines-under-*`/`wine-under-*` paths were also updated in `alco
 | Photo | P2 2003 bottle photo, until a hamper photo is shot |
 | Channels | Online Store, Google & YouTube, Facebook & Instagram, Pinterest |
 | Cross-links | `/pages/caviar-hampers` (carousel card with Add to Cart, comparison row, ItemList, stats now say 13 hampers from £180 to £850, chooser, FAQ); Dom Pérignon x Damien Hirst page wording; P2 2003 bottle page links to the hamper; the hamper links back to the bottle and the hub |
+
+## 11. Non-Vintage Wine collection rule (17 Oct 2026)
+
+`/collections/non-vintage-wine` used OR rules: tag = Non-Vintage, tag = NV, **tag = Charbonnel et Walker**. Because Shopify tag matching ignores case and hyphens, the third rule matched every product tagged `charbonnel-et-walker`: 64 of 66 products were chocolates and hampers, including vintage Dom Pérignon hampers. Only Lanson Le Black Création 257 was a real NV wine.
+
+- Removed the Charbonnel et Walker rule. Rules are now tag = Non-Vintage OR tag = NV.
+- Tagged 14 active wines and Champagnes with "NV" / "Non Vintage" in the title as `Non-Vintage`: Laurent-Perrier Cuvée Rosé, Taittinger Brut Reserve, Veuve Clicquot Rich Rosé, Moët Ice Impérial Rosé, Deutz Classic Brut, Billecart Salmon Brut Reserve and Brut Rosé, Moët Collection Impériale Création No. 1, Bollinger Special Cuvée Rosé Magnum, Ayala Rosé Majeur, Wiston Estate Blanc de Blancs, Domaine Evremond Classic Cuvée, Barons de Rothschild Concordia, Tarlant Tradition Extra Brut.
+- No title-contains rule was added, because a substring match on "NV" would catch words like "Envy" or "Invergordon".
+- Follow-up: NV Champagnes without "NV" in their title (for example Moët Impérial Brut, Veuve Clicquot Yellow Label) need the `Non-Vintage` tag to appear.
