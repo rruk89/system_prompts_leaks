@@ -148,3 +148,4 @@ Correction: `wines-under-100` is **"Gifts under £100"**, not a wine collection,
 | /collections/caviar-gifts-hampers | "caviar gift sets" (shop grid) |
 | /collections/caviar-champagne-gift-in-uk | "caviar & Champagne gifts London" |
 | /collections/caviar-delivery-london | "caviar delivery London" (tins) |
+Links to the old `wines-under-*`/`wine-under-*` paths were also updated in `alcohol-gift-sets` ("Shopping to a budget?" paragraph). A scan of all 215 collections and the gifts-delivered-london page found no old paths left; the redirects cover any other links.
