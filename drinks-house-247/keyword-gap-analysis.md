@@ -171,3 +171,9 @@ Links to the old `wines-under-*`/`wine-under-*` paths were also updated in `alco
 - Tagged 14 active wines and Champagnes with "NV" / "Non Vintage" in the title as `Non-Vintage`: Laurent-Perrier Cuvée Rosé, Taittinger Brut Reserve, Veuve Clicquot Rich Rosé, Moët Ice Impérial Rosé, Deutz Classic Brut, Billecart Salmon Brut Reserve and Brut Rosé, Moët Collection Impériale Création No. 1, Bollinger Special Cuvée Rosé Magnum, Ayala Rosé Majeur, Wiston Estate Blanc de Blancs, Domaine Evremond Classic Cuvée, Barons de Rothschild Concordia, Tarlant Tradition Extra Brut.
 - No title-contains rule was added, because a substring match on "NV" would catch words like "Envy" or "Invergordon".
 - Follow-up: NV Champagnes without "NV" in their title (for example Moët Impérial Brut, Veuve Clicquot Yellow Label) need the `Non-Vintage` tag to appear.
+- **Follow-up done:** tagged 113 more active Champagne products `Non-Vintage` (list in `nv-tagged-champagnes.json`). Selection: every active `champagne`-type product with no year in its title, excluding:
+  - hampers;
+  - wines that are vintage by definition: Dom Pérignon, Belle Epoque, Grand Vintage, Pol Roger Vintage, Sir Winston Churchill, Bollinger B13, Ayala A/18;
+  - grower cuvées whose vintage status was unclear: Pierre Péters Les Chétillons, Les Montjolys and Monsieur Victor MK14, Frerejean VV26, Collard-Picard, Billecart Rendez-Vous No. 3;
+  - the Romantic Moët Rosé gift set (truffles and rose).
+  Multi-vintage prestige cuvées with no vintage date (Krug Grande Cuvée, Grand Siècle Iteration, Roederer Collection 243, Bollinger PN TX17) count as non-vintage. Expected collection size is 128.
