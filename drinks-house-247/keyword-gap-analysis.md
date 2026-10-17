@@ -124,3 +124,14 @@ The new hub was first published at `/pages/caviar-champagne-hampers-london`. The
 | Collection SEO | caviar-champagne-gift-in-uk is now `Caviar & Champagne Gifts London \| Same Day Delivery \| Drinks House 247`, and its description links to the hub |
 | Cross-links | Collections gifts-hampers, corporate-gifts and caviar-champagne-gift-in-uk; Dom Pérignon x Damien Hirst page; the 12 hamper product pages. The main menu, footer and gifts-delivered-london already linked to /pages/caviar-hampers |
 | Left out | Cipriani Bellini Hamper (out of stock), Croe Sevruga (draft) |
+
+## 9. "Gifts under £X" collection rules (17 Oct 2026)
+
+Correction: `wines-under-100` is **"Gifts under £100"**, not a wine collection, so caviar and chocolate rightly belong there. The real problem was non-gift products leaking into the four budget gift collections. Every collection kept its existing price rules and gained the same type exclusions: beers, Mixers, Cigarettes, Extras (lighters, crisps, ice, painkillers), tablets (supplements), Soft Drink, cider, mw_hidden_cart_fee (service fee). "Gifts under £200" had no minimum price, so it got a £90 minimum to match the overlapping-band pattern of the others.
+
+| Collection | Price rule | Products before | After |
+|---|---|---|---|
+| Gifts under £50 (`wines-under-50`) | £26–£50 | 274 | 254 |
+| Gifts under £100 (`wines-under-100`) | £45–£100 | 455 | 453 |
+| Gifts under £200 (`wine-under-200`) | was <£200, now £90–£200 | 1,069 | 425 |
+| Gifts under £500 (`wine-under-500`) | £68–£500 | 650 | 650 |
