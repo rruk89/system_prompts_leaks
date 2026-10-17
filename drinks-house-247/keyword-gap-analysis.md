@@ -149,3 +149,16 @@ Correction: `wines-under-100` is **"Gifts under £100"**, not a wine collection,
 | /collections/caviar-champagne-gift-in-uk | "caviar & Champagne gifts London" |
 | /collections/caviar-delivery-london | "caviar delivery London" (tins) |
 Links to the old `wines-under-*`/`wine-under-*` paths were also updated in `alcohol-gift-sets` ("Shopping to a budget?" paragraph). A scan of all 215 collections and the gifts-delivered-london page found no old paths left; the redirects cover any other links.
+
+## 10. New product: The Dom Pérignon P2 2003 & Caviar Hamper (17 Oct 2026)
+
+| Field | Value |
+|---|---|
+| URL | `/products/the-dom-perignon-p2-2003-caviar-hamper` |
+| Price / SKU / stock | £850 / `HAMPER-DP-P2-2003-CAVIAR50` / 12 |
+| Contents | Dom Pérignon Plénitude 2 (P2) Vintage 2003 75cl (gift box), 50g Croe Royal Oscietra, mother-of-pearl spoon, crème fraîche, mini blinis, Charbonnel et Walker 007 truffles, Torres caviar crisps, velvet green gift box and message |
+| Price logic | Bottle £590 + £260, the middle of the existing hamper uplift range (£230–£290) |
+| Built from | Duplicate of The Dom Pérignon & Caviar Hamper (tags and collections). Removed from best-sellers, most-popular and champagne-flute-gift-sets |
+| Photo | P2 2003 bottle photo, until a hamper photo is shot |
+| Channels | Online Store, Google & YouTube, Facebook & Instagram, Pinterest |
+| Cross-links | `/pages/caviar-hampers` (carousel card with Add to Cart, comparison row, ItemList, stats now say 13 hampers from £180 to £850, chooser, FAQ); Dom Pérignon x Damien Hirst page wording; P2 2003 bottle page links to the hamper; the hamper links back to the bottle and the hub |
