@@ -139,3 +139,12 @@ Correction: `wines-under-100` is **"Gifts under £100"**, not a wine collection,
 **Handle rename (17 Oct 2026):** `wines-under-100` is now `gifts-under-100`, with a Shopify 301 redirect `/collections/wines-under-100` → `/collections/gifts-under-100`. The "Shop by budget" links in the five sister collections (wines-under-50, wine-under-200, wine-under-500, gifts-under-1000, gifts-over-1000) now point to the new URL. No menu linked to the old one. The other budget collections still have wine-style handles (`wines-under-50`, `wine-under-200`, `wine-under-500`).
 
 **More handle renames (17 Oct 2026):** `wines-under-50` → `gifts-under-50`, `wine-under-200` → `gifts-under-200`, `wine-under-500` → `gifts-under-500`, each with a Shopify 301 redirect. All four budget collections now use `gifts-under-*` handles. "Shop by budget" links in the budget collections and the "Gifts by Budget" grid on `/pages/gifts-delivered-london` now point to the new URLs.
+
+**Caviar Gifts & Hampers collection (17 Oct 2026):** the SEO title changed from `Caviar Gifts & Hampers | London & UK | Drinks House 247` to `Caviar Gift Sets | Delivered Same Day in London | Drinks House 247`, with a new meta description. The visible name and existing description are unchanged, and a link to `/pages/caviar-hampers` was added. Search roles in the caviar cluster:
+
+| URL | Targets |
+|---|---|
+| /pages/caviar-hampers | "caviar hampers London", comparison and caviar guide |
+| /collections/caviar-gifts-hampers | "caviar gift sets" (shop grid) |
+| /collections/caviar-champagne-gift-in-uk | "caviar & Champagne gifts London" |
+| /collections/caviar-delivery-london | "caviar delivery London" (tins) |
