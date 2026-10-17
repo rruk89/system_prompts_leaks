@@ -135,3 +135,5 @@ Correction: `wines-under-100` is **"Gifts under £100"**, not a wine collection,
 | Gifts under £100 (`wines-under-100`) | £45–£100 | 455 | 453 |
 | Gifts under £200 (`wine-under-200`) | was <£200, now £90–£200 | 1,069 | 425 |
 | Gifts under £500 (`wine-under-500`) | £68–£500 | 650 | 650 |
+
+**Handle rename (17 Oct 2026):** `wines-under-100` is now `gifts-under-100`, with a Shopify 301 redirect `/collections/wines-under-100` → `/collections/gifts-under-100`. The "Shop by budget" links in the five sister collections (wines-under-50, wine-under-200, wine-under-500, gifts-under-1000, gifts-over-1000) now point to the new URL. No menu linked to the old one. The other budget collections still have wine-style handles (`wines-under-50`, `wine-under-200`, `wine-under-500`).
