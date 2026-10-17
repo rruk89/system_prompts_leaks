@@ -110,14 +110,17 @@ so those site-wide links probably show a 404. Fix: review and publish it, or re-
 | Tondonia Reserva 2014 75cl (draft) | Duplicated from the 2011 with the 2011 photo. Price £138, SKU `TONDONIA-RESERVA14-75CL`, handle `lopez-de-heredia-vina-tondonia-tinto-reserva-2014-75cl`. New description (`tondonia-reserva-2014-product-description.html`: 95 pts Wine Advocate, 2014 tasting notes and blend, a 2011 comparison question, and links to Cubillo 2014 and the Rioja collection) plus a new SEO title and description |
 | Tondonia 2014 live | Stock: 12. Set Active and published to Online Store, Google & YouTube, Facebook & Instagram and Pinterest. It now sits in the Fine Wine £100+ collection instead of the under-£100 collections |
 
-## 8. Caviar & Champagne Hampers hub (17 Oct 2026)
+## 8. Caviar hampers hub, merged into /pages/caviar-hampers (17 Oct 2026)
 
-`caviar-champagne-hampers-london.html` is an infographic hub for `/pages/caviar-champagne-hampers-london`, targeting "caviar hamper London", "caviar and champagne hamper", "caviar gift delivery London" and related searches.
+The new hub was first published at `/pages/caviar-champagne-hampers-london`. Then we found the existing live page `/pages/caviar-hampers`, which the main menu and footer already link to and which targets the same searches. The two were merged into the established URL (`caviar-hampers.html`).
 
 | Element | Value |
 |---|---|
-| SEO title | `Caviar & Champagne Hampers London \| Same Day \| Drinks House 247` |
-| Sections | Hero; 4 stat tiles; Champagne & caviar hamper carousel (9); vodka/tequila & caviar carousel (3); comparison table (12 hampers); caviar species guide (Baeri, Oscietra, Kaluga, Beluga, Almas); 30g starting-price bar chart with table view; caviar tin carousel (14); "which hamper" chooser; serving guide; About; 7 FAQs |
-| Schema | BreadcrumbList, ItemList (12 hampers), FAQPage |
+| Page | `/pages/caviar-hampers` (old body backed up before the replacement) |
+| SEO title | `Caviar Hampers London \| Champagne & Caviar Same Day \| Drinks House 247` |
+| Sections | Hero; stats; Champagne & caviar hamper carousel (9) and vodka/tequila carousel (3), all with Add to Cart; comparison table (12); gift box colours (kept from the old page); caviar species guide; 30g starting-price chart; caviar tin carousel (14); chooser; serving guide; corporate & event orders (kept from the old page); About plus area links; 8 FAQs |
+| Links out | Beluga, Oscietra and how-to-serve guides; same-day caviar delivery; caviar delivery collections; Mayfair, Knightsbridge, Chelsea and Canary Wharf caviar pages; corporate caviar gifts |
+| Duplicate | `/pages/caviar-champagne-hampers-london` unpublished, with a 301 redirect to `/pages/caviar-hampers` |
+| Collection SEO | caviar-champagne-gift-in-uk is now `Caviar & Champagne Gifts London \| Same Day Delivery \| Drinks House 247`, and its description links to the hub |
+| Cross-links | Collections gifts-hampers, corporate-gifts and caviar-champagne-gift-in-uk; Dom Pérignon x Damien Hirst page; the 12 hamper product pages. The main menu, footer and gifts-delivered-london already linked to /pages/caviar-hampers |
 | Left out | Cipriani Bellini Hamper (out of stock), Croe Sevruga (draft) |
-| Status | Created as an unpublished draft. Publish, then add cross-links |
