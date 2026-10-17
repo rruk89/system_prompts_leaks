@@ -109,3 +109,15 @@ so those site-wide links probably show a 404. Fix: review and publish it, or re-
 | Tondonia Reserva 2011 75cl (`/products/vinos-finos-de-rioja`) | Stock set from 1 to 0, with overselling off, so it shows as sold out. The page stays live |
 | Tondonia Reserva 2014 75cl (draft) | Duplicated from the 2011 with the 2011 photo. Price £138, SKU `TONDONIA-RESERVA14-75CL`, handle `lopez-de-heredia-vina-tondonia-tinto-reserva-2014-75cl`. New description (`tondonia-reserva-2014-product-description.html`: 95 pts Wine Advocate, 2014 tasting notes and blend, a 2011 comparison question, and links to Cubillo 2014 and the Rioja collection) plus a new SEO title and description |
 | Tondonia 2014 live | Stock: 12. Set Active and published to Online Store, Google & YouTube, Facebook & Instagram and Pinterest. It now sits in the Fine Wine £100+ collection instead of the under-£100 collections |
+
+## 8. Caviar & Champagne Hampers hub (17 Oct 2026)
+
+`caviar-champagne-hampers-london.html` is an infographic hub for `/pages/caviar-champagne-hampers-london`, targeting "caviar hamper London", "caviar and champagne hamper", "caviar gift delivery London" and related searches.
+
+| Element | Value |
+|---|---|
+| SEO title | `Caviar & Champagne Hampers London \| Same Day \| Drinks House 247` |
+| Sections | Hero; 4 stat tiles; Champagne & caviar hamper carousel (9); vodka/tequila & caviar carousel (3); comparison table (12 hampers); caviar species guide (Baeri, Oscietra, Kaluga, Beluga, Almas); 30g starting-price bar chart with table view; caviar tin carousel (14); "which hamper" chooser; serving guide; About; 7 FAQs |
+| Schema | BreadcrumbList, ItemList (12 hampers), FAQPage |
+| Left out | Cipriani Bellini Hamper (out of stock), Croe Sevruga (draft) |
+| Status | Created as an unpublished draft. Publish, then add cross-links |
